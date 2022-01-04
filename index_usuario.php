@@ -13,9 +13,6 @@
 		session_destroy();
 	}
 
-	if(isset($_SESSION['usuario'])){
-		include('registro/login_usuario_be.php');
-	}
 	
 ?>
 
@@ -48,7 +45,7 @@
                 </ul>
             </div>
             <div class="nav__div div_conten-button">
-                <div class="div_button">Bienvenido</div>
+                <div class="div_button"><a class="div_button-link"> <?php if(isset($_SESSION['usuario'])){include('registro/login_usuario_be.php');} ?> </a></div>
 				<div class="div_button div_button-color"><a class="div_button-link " href="registro/cerrar_sesion.php">Cerrar Sesion</a></div>
             </div>
         </nav>
