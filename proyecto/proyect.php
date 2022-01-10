@@ -24,8 +24,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Kanban</title>
 </head>
 <body>
@@ -36,19 +36,19 @@
             </div>
             <div class="nav__div">
                 <ul class="nav__div-ul ">
-                    <li class="nav__item "><a class="div__conten-item" href="index_usuario.php">Inicio</a> </li>
+                    <li class="nav__item "><a class="div__conten-item" href="../index_usuario.php">Inicio</a> </li>
                     
-                    <li class="nav__item "><a class="div__conten-item" href="proyecto/register_proyect.php">Crear un proyecto</a> </li>
+                    <li class="nav__item "><a class="div__conten-item" href="register_proyect.php">Crear un proyecto</a> </li>
                     
-                    <li class="nav__item "><a class="div__conten-item" href="proyecto/getinto_proyect.php">Ingresar a un proyecto</a> </li>
+                    <li class="nav__item "><a class="div__conten-item" href="getinto_proyect.php">Ingresar a un proyecto</a> </li>
                     
                 </ul>
             </div>
             <div class="nav__div div_conten-button">
                 <div class="div_button"><a class="div_button-link"> <?php if(isset($_SESSION['usuario'])){echo
-			$_SESSION['usuario']
-		;} ?> </a></div>
-				<div class="div_button div_button-color"><a class="div_button-link " href="registro/cerrar_sesion.php">Cerrar Sesion</a></div>
+			        $_SESSION['usuario']
+		        ;} ?> </a></div>
+				<div class="div_button div_button-color"><a class="div_button-link " href="../registro/cerrar_sesion.php">Cerrar Sesion</a></div>
             </div>
         </nav>
     </header>
