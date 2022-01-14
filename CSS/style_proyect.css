@@ -255,10 +255,6 @@
 }
 
 
-
-
-
-
 .conteiner-form form{
     width: 100%;
     padding: 80px 20px;
@@ -296,13 +292,6 @@
     outline: none;
 }
 
-
-
-
-.formulario__login{
-    opacity: 1;
-    display: block;
-}
 .formulario__register{
     display: block;
 }
