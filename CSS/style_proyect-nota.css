@@ -1,0 +1,35 @@
+.conteiner-nota{
+    width: 170px;
+    border: solid 2px black;
+}
+
+.conteiner-nota .nota-header{
+    height: 60px;
+    max-height: 120px;
+    padding: 2px;
+    background-color: blanchedalmond;
+    border-bottom: solid 2px black;
+    display: flex;
+}
+
+.conteiner-nota .nota-header .nota-title{
+    margin: auto;
+    font-size: 25px;
+}
+
+.conteiner-nota .nota-header .icon-proy{
+    width: 25px;
+}
+
+
+
+.conteiner-nota .nota-conten{
+    padding: 4px;
+}
+
+
+
+.conteiner-nota .nota-footer{
+    height: 60px;
+    background-color: blanchedalmond;
+}

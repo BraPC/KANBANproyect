@@ -194,7 +194,7 @@ li{
     min-width: 50%;
     height: 600px;
 }
-img{
+.div-img img{
     display:block;
     height: 100%;
     margin:auto;
