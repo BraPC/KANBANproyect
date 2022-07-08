@@ -136,6 +136,7 @@ footer{
 li{
     display: list-item;
     text-align: -webkit-match-parent;
+	list-style: none;
 }
 .conteiner{
     display: flex;
@@ -167,10 +168,10 @@ li{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.5 ;
-    padding: 380px 50px;
+    padding: 250px 50px;
+	font-size: 3em;
+	color: #000000;
 }
-
 
 .div-tema{
     margin: 0px 5px;
@@ -193,7 +194,7 @@ li{
     min-width: 50%;
     height: 600px;
 }
-img{
+.div-img img{
     display:block;
     height: 100%;
     margin:auto;
@@ -203,6 +204,10 @@ img{
     background-color: #fffdfd;
     border-radius: 50%;
 }
+
+
+
+
 
 
 

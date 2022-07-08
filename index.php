@@ -1,3 +1,14 @@
+<?php
+	//Si no tienes sesion te reenvia a la pagina principal
+	session_start();
+
+	if(isset($_SESSION['usuario'])){
+		header("location: index_usuario.php");
+		die();
+	}
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +27,17 @@
             </div>
             <div class="nav__div">
                 <ul class="nav__div-ul ">
-                    <il class="nav__item "><a class="div__conten-item" href="">Inicio</a> </il>
+                    <li class="nav__item "><a class="div__conten-item" href="index.php">Inicio</a> </li>
                     
-                    <il class="nav__item "><a class="div__conten-item" href="">Crear un proyecto</a> </il>
+                    <li class="nav__item "><a class="div__conten-item" href="#">Crear un proyecto</a> </li>
                     
-                    <il class="nav__item "><a class="div__conten-item" href="">Ingresar a un proyecto</a> </il>
+                    <li class="nav__item "><a class="div__conten-item" href="#">Ingresar a un proyecto</a> </li>
                     
                 </ul>
             </div>
             <div class="nav__div div_conten-button">
-                <div class="div_button"><a class="div_button-link " href="">iniciar seccion</a></div>
-                <div class="div_button div_button-color"><a class="div_button-link " href="">Crear cuenta</a></div>
+                <div class="div_button"><a class="div_button-link " href="registro/registro.php">iniciar seccion</a></div>
+                <div class="div_button div_button-color"><a class="div_button-link " href="registro/registro.php">Crear cuenta</a></div>
             </div>
         </nav>
     </header>
@@ -114,5 +125,3 @@
             </div>
         </div>
     </footer>
-</body>
-</html>

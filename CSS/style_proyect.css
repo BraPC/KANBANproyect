@@ -1,0 +1,297 @@
+:root{
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(52, 52, 52);
+    --hovercolor: rgb(23,23,23);
+    --widht-collapsed: 50px;
+}
+
+.body-expanded{
+    margin: var(--width);
+}
+
+
+
+#main-container{
+    color: #fff;
+}
+
+.container-sidemenu{
+    margin: 10px 5px;
+    position: fixed;
+    height: 85%;
+    border-radius: 10px;
+    padding: 0;
+    background-color: #1ab3ca;
+}
+
+#sidemenu{
+    background-color: var(--bgcolor);
+    color: #fff;
+    position: fixed;
+    height: 85%;
+    border-radius: 30px;
+    border-top-right-radius: 1000px;
+}
+
+
+#sidemenu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#sidemenu #header-menu{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header-menu #title{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#sidemenu #header-menu #title, #sidemenu #header-menu #menu-btn{
+    vertical-align: middle;
+}
+
+#sidemenu #header-menu #menu-btn{
+    display: inline-block;
+}
+
+#sidemenu #header-menu #menu-btn{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--widht-collapsed);
+    box-sizing: border-box;
+}
+
+#sidemenu #header-menu #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #header-menu #menu-btn .btn-hamburger{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+
+
+#sidemenu #profile-menu{
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+}
+
+#sidemenu #profile-menu #photo{
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+
+#sidemenu #profile-menu #photo img{
+    border-radius: 100%;
+    width: 60px;
+}
+
+#sidemenu #profile-menu #photo, #sidemenu #profile-menu #name{
+    font-size: 24px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+}
+
+
+
+#sidemenu #menu-items{
+    overflow: hidden;
+}
+
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+
+#sidemenu #menu-items .item.pointer{
+    cursor: pointer;
+}
+
+#sidemenu #menu-items .item .icon{
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item .icon, #sidemenu #menu-items .item .title{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item a{
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+}
+#sidemenu #menu-items .item.pointer:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon{
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--widht-collapsed);
+}
+
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+
+#sidemenu #menu-items .item .title{
+    padding: var(--padding) 0;
+}
+
+#sidemenu #menu-items .item .separator{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+
+.container-sidemenu.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.4s;
+}
+
+.menu-expanded #header-menu #title{
+    display: inline-block;
+    width: calc(100%-50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header-menu #title span{
+    width: calc(var(--width) - var(--widht-collapsed) - 5px);
+    overflow: hidden;
+}
+
+.menu-expanded #profile-menu #photo{
+    width: 200px;
+}
+
+.menu-expanded #profile-menu #name{
+    width: 100%;
+}
+
+.menu-collapsed{
+    width: var(--widht-collapsed);
+    transition: all 0.5s;
+}
+
+.container-sidemenu.menu-collapsed{
+    width: var(--widht-collapsed);
+}
+.menu-collapsed #header-menu #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-collapsed #profile-menu #name{
+    display: none;
+}
+
+.menu-collapsed .item{
+    width: 100px;
+}
+
+
+
+.conteiner-form{
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+}
+
+.conteiner-form.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+}
+
+.conteiner-form .close-form{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    text-align: center;
+    line-height: 15px;
+    background-color: #1ab3ca;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.conteiner-form .close-form:hover{
+    background-color: #aaa;
+}
+
+
+.conteiner-form form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+
+    border-radius: 20px;
+}
+
+.conteiner-form form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(10,132,202);
+}
+
+.conteiner-form form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.conteiner-form form .button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: rgb(10,132,202);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.formulario__register{
+    display: block;
+}
